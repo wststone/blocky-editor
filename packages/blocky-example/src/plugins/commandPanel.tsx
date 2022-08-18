@@ -1,10 +1,11 @@
-import { ComponentChild } from "preact";
+import type { ComponentChild } from "preact";
 import { PureComponent } from "preact/compat";
 import { makePreactFollowerWidget } from "blocky-preact";
 import {
   type IDisposable,
   flattenDisposable,
 } from "blocky-common/es/disposable";
+import { Panel, PanelValue } from "@pkg/components/panel";
 import { type EditorController, type IPlugin, TextBlock } from "blocky-core";
 import "./commandPanel.scss";
 
@@ -90,14 +91,14 @@ class CommandPanel extends PureComponent<CommandPanelProps, CommandPanelState> {
     const { selectedIndex } = state;
     const commandContent = editingValue.slice(1);
     return (
-      <div className="blocky-command-panel-container">
-        <div className="blocky-command-value">
+      <Panel>
+        <PanelValue>
           Command: {commandContent.length === 0 ? "Empty" : commandContent}
-        </div>
+        </PanelValue>
         <div className="blocky-commands-container">
           <CommandItem selected={selectedIndex === 0}>Alert</CommandItem>
         </div>
-      </div>
+      </Panel>
     );
   }
 }
