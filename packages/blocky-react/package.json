@@ -1,0 +1,34 @@
+{
+  "name": "blocky-react",
+  "version": "1.0.0",
+  "description": "The React wrapper of the blocky editor.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "homepage": "https://github.com/vincentdchan/blocky-editor",
+  "keywords": [
+    "editor",
+    "react"
+  ],
+  "author": "SitengWang <wangsiteng123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.41",
+    "blocky-common": "workspace:*",
+    "blocky-core": "workspace:*",
+    "blocky-data": "workspace:*",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "typescript": "^4.7.3"
+  },
+  "peerDependencies": {
+    "blocky-common": "workspace:>=2.3.0",
+    "blocky-core": "workspace:>=2.7.0",
+    "blocky-data": "workspace:>=2.7.0",
+    "react": "*",
+    "react-dom": "*"
+  }
+}
